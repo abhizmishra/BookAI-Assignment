@@ -7,7 +7,7 @@ const Hero = () => {
         <p className="text-[48px] font-bold text-center ">
           Explore the Possibilities of 
           <span>     </span>
-          <span className="sm:border-b-2 sm:border-[#6B7DFE] text-[#6310A7]">
+          <span className="sm:border-b-2 sm:border-[#6B7DFE] text-[#6310A7] outline-10">
           
              AI Book Writing
           </span>{" "}

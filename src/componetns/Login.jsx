@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { auth, provider, signInWithPopup } from "../firebase.js";
+// import { auth, provider, signInWithPopup } from "../firebase.js";
 
-const Login = () => {
+export const Login = () => {
   const [user, setUser] = useState(null);
 
   const handleLogin = () => {

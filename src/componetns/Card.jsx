@@ -11,34 +11,34 @@ const Card = () => {
         Explore some of the captivating books created using our AI technology.
       </p>
        <div  className="flex flex-wrap justify-center items-center gap-10 ">
-      {Cards.map((card,key) => {
+        {Cards.map((card, key) => {
+    
         return (
           <>
-        
-            
            
-                <div key={key} className="flex max-w-[350px] flex-col text-center justify-center h-auto w-auto bg-white/5 p-5 rounded-lg hover:-translate-y-3 duration-300">
-                <img
-                  className="h-[300px] w-[200px] self-center rounded-lg mb-5"
-                  src={card.imgUrl}
-                  alt="Img"
-                />
-                <h1 className="font-bold text-lg">{card.name}</h1>
-                <p className=" text-[16px] italic text-[#AEADAE] font-normal">
-                  "As Dr. Elara stepped through the shimmering portal, she knew
-                  there was no turning back. The fate of two universes now
-                  rested in her hands..."
-                </p>
-                <a
-                  href="/"
-                  className="text-[#7f19df] hover:text-white duration-300 mt-7"
+                <div
+                  key={key}
+                  className="flex max-w-[350px] flex-col text-center justify-center h-auto w-auto bg-white/5 p-5 rounded-lg hover:-translate-y-3 duration-300"
                 >
-                  Read More
-                </a>
-              </div>
-          
-         
-             
+                  <img
+                    className="h-[300px] w-[200px] self-center rounded-lg mb-5"
+                    src={card.imgUrl}
+                    alt="Img"
+                  />
+                  <h1 className="font-bold text-lg">{card.name}</h1>
+                  <p className=" text-[16px] italic text-[#AEADAE] font-normal">
+                    "As Dr. Elara stepped through the shimmering portal, she
+                    knew there was no turning back. The fate of two universes
+                    now rested in her hands..."
+                  </p>
+                  <a
+                    href="/"
+                    className="text-[#7f19df] hover:text-white duration-300 mt-7"
+                  >
+                    Read More
+                  </a>
+                </div>
+            
           </>
         );
       })}

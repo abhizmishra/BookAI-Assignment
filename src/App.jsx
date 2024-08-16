@@ -10,14 +10,17 @@ import UserReview from "./componetns/UserReview.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DarkMode from "./componetns/DarkMode.jsx";
 import "./App.css";
+import GAuth from "./componetns/GAuth.jsx";
+
 
 function App() {
   return (
     <>
       <Router>
-        <Routes>{/* <Route path="/login" element={<Login/>} /> */}</Routes>
-
         <Navbar />
+        <Routes>
+          <Route path="/login" element={ <GAuth/>} />
+        </Routes>
 
         <Hero />
         <FeatureInfo />

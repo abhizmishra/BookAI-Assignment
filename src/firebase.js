@@ -1,12 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.FIREBASE_API,
+  apiKey: "AIzaSyATDDew74rdGdY62DK_mn1BNNFRR6VQkQM",
   authDomain: "book-ai-1b6eb.firebaseapp.com",
   projectId: "book-ai-1b6eb",
   storageBucket: "book-ai-1b6eb.appspot.com",
@@ -15,8 +14,4 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-
-export { auth, provider, signInWithPopup };
+export const app = initializeApp(firebaseConfig);

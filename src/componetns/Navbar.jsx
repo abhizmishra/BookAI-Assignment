@@ -1,8 +1,22 @@
 import React from "react";
 import DarkMode from "./DarkMode.jsx";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 
-const Navbar = () => {
+
+
+
+export const Navbar = (handleGoogleClick) => {
+  const { currentUser } = useSelector((state) => state.user);
+  
+  const url = useSelector((state) => state.user.profileUrl)
+  console.log(url);
+
+  const clearUser = () => { 
+    dispatch(signOutUserSuccess());
+   }
+
   return (
     <div className=" mx-[12%] mt-10 text-white flex flex-wrap justify-items-center  gap-2 ">
       <div className="flex flex-auto items-center">
@@ -40,10 +54,25 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
-      <button className=" px-4 h-10 mt-2 ml-2  font-normal  bg-[#6590FF] rounded-sm">
-        Login / Sign Up
-      </button>
-    <DarkMode/>
+      <Link to={"/login"}>
+        {currentUser ? (
+          <div className="flex flex-nowrap relative">
+            <button onClick={clearUser} className=" px-4 h-10 mt-2 ml-2  font-normal  bg-[#6590FF] rounded-sm mr-5">
+             LogOut
+            </button>
+            <img
+              src={url}
+              className="  h-12 w-12 mt-1 rounded-full"
+              alt="profile"
+            />
+          </div>
+        ) : (
+          <button className=" px-4 h-10 mt-2 ml-2  font-normal  bg-[#6590FF] rounded-sm">
+            Login / Sign Up
+          </button>
+        )}
+      </Link>
+      <DarkMode />
     </div>
   );
 };
