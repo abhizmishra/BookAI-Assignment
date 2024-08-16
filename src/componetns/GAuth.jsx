@@ -39,18 +39,19 @@ export default function GAuth() {
       navigate("/");
     } catch (error) {
       console.log("could not sign in with google", error);
+      console.log(import.meta.env.FIREBASE_API);
     }
   };
   return (
     <div className="flex flex-nowrap gap-5 justify-center items-center mt-20 ">
       <button
         onClick={handleGoogleClick}
-        // onLoad={handleGoogleClick}
+       
         type="button"
         className="flex flex-nowrap gap-5 justify-center items-center  bg-[#6590FF] p-2 rounded-lg"
       >
         {" "}
-        <h1 className="text-white ">Continue With Google</h1>
+        <h1 className="text-white ml-4 ">Continue With Google</h1>
         <FcGoogle className="h-10 w-10" />
       </button>
     </div>
