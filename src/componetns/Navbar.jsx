@@ -9,12 +9,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 export const Navbar = (handleGoogleClick) => {
   const { currentUser } = useSelector((state) => state.user);
+ 
   
   const url = useSelector((state) => state.user.profileUrl)
-  console.log(url);
+ 
 
   const clearUser = () => { 
-    dispatch(signOutUserSuccess());
+    dispatch(signOutUserSuccess())
+    
    }
 
   return (

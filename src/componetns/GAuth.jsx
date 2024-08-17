@@ -5,6 +5,7 @@ import {
   signInSuccess,
   setPhotoUrl,
   signOutUserSuccess,
+  clearPhotoUrl
 } from "../redux/user/userSlice.js";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -19,7 +20,8 @@ export default function GAuth() {
   
 
   useEffect(() => { 
-    dispatch(signOutUserSuccess());
+    dispatch(signOutUserSuccess())
+      dispatch(clearPhotoUrl());
   })
 
   const handleGoogleClick = async () => {
