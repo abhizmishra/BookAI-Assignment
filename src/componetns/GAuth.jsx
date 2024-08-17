@@ -15,6 +15,7 @@ import { FcGoogle } from "react-icons/fc";
 export default function GAuth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+ 
   
 
   useEffect(() => { 
@@ -39,7 +40,7 @@ export default function GAuth() {
       navigate("/");
     } catch (error) {
       console.log("could not sign in with google", error);
-      console.log(import.meta.env.FIREBASE_API);
+      
     }
   };
   return (
